@@ -5,7 +5,7 @@ export default createStore({
     cat_id: 275,
   },
   getters: {
-    logTest: (state) => (id) => {
+    getId: (state) => (id) => {
       state.cat_id = id;
     },
   },

@@ -1,9 +1,9 @@
 <template>
-  <div class="home h-100 d-flex align-items-center">
+  <div class="home d-flex align-items-center">
     <div class="container">
       <div class="row">
         <div class="col-6 p-lg-5 p-sm-1" v-for="item in info" :key="item.id">
-          <router-link @click="logTest(item)" to="/stream">
+          <router-link @click="getId(item)" to="/stream">
             <div class="category">
               <span>{{ item.category_name }}</span>
             </div>
@@ -33,8 +33,8 @@ export default {
       .then((response) => (this.info = response.data));
   },
   methods: {
-    logTest(e) {
-      return this.$store.getters.logTest(e.category_id);
+    getId(e) {
+      return this.$store.getters.getId(e.category_id);
     },
   },
 };
@@ -44,16 +44,22 @@ export default {
 * {
   box-sizing: border-box;
 }
+.home {
+  height: 100vh;
+}
 .category {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(227, 227, 227, 0.5);
   padding: 20px;
   border-radius: 10px;
   height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 768px) {
     height: 100%;
+  }
+  &:hover {
+    background: rgba(227, 227, 227, 0.9);
   }
 }
 a {
@@ -64,7 +70,7 @@ a {
     color: #42b983;
     text-decoration: none;
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 768px) {
     font-size: 1em;
   }
 }
