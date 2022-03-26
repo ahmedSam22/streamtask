@@ -1,6 +1,7 @@
 # streamtask
 HMASERVE technical task .
 ```
+###setup project .
 git clone https://github.com/ahmedSam22/streamtask.git.
 
 cd streamtask
