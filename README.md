@@ -1,12 +1,13 @@
 # streamtask
 HMASERVE technical task .
 ```
-## Project setup.
 git clone https://github.com/ahmedSam22/streamtask.git.
-```
-npm install
+
 cd streamtask
 npm install
+```
+
+
 ```
 
 ### Compiles and hot-reloads for development
